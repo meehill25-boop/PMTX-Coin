@@ -134,29 +134,57 @@ elif page == t["nav"][3]: # Presale & Referrals
     st.subheader(f"🔗 {t['ref']}")
     u = st.text_input(t["user_lbl"])
     if st.button(t["gen_btn"]): st.session_state.username = u or "user"
-    st.code(f"https://pmtx-coin.io/?ref={st.session_state.username}")
+    st.code(f"https://pmtx-coin.io{st.session_state.username}")
     
-    # --- نظام الترجمة التلقائية للنص التحفيزي والشرح (6 لغات) ---
-    # نتحقق من اللغة الحالية عبر المفتاح المستعمل في موقعك لترجمة عنوان الزر كمؤشر
-    current_lang = "ar" if "إنشاء" in t["gen_btn"] or "رابط" in t["gen_btn"] else "en"
+    # --- كاشف اللغة الدقيق والنهائي للموقع عبر فحص الكلمات المفتاحية لموقعك ---
+    btn_text = str(t["gen_btn"]).lower()
     
-    # 1. النصوص باللغة العربية
+    if "إنشاء" in btn_text or "توليد" in btn_text or "رابط" in btn_text:
+        current_lang = "ar"
+    elif "générer" in btn_text or "generer" in btn_text:
+        current_lang = "fr"
+    elif "generar" in btn_text:
+        current_lang = "es"
+    elif "создать" in btn_text or "сгенерировать" in btn_text:
+        current_lang = "ru"
+    elif "生成" in btn_text:
+        current_lang = "zh"
+    else:
+        current_lang = "en"
+
+    # تخصيص نصوص الشرح والأرباح (2/100) حسب اللغة المكتشفة
     if current_lang == "ar":
         promo = "**ضاعف أرباحك اليوم!** شارك رابطك المخصص مع أصدقائك واكسب عوائد مستمرة فور تفعيل استثماراتهم."
         explain = "**كيف تحسب أرباحك؟** لكل شخص يسجل عبر رابطك ويقوم بالاستثمار، ستحصل على **2%** من قيمة استثماره (بمعدل **2 دولار لكل 100 دولار مستثمرة**)."
     
-    # 2. النصوص باللغة الإنجليزية (افتراضية لباقي اللغات إذا لم تكن العربية)
-    else:
+    elif current_lang == "fr":
+        promo = "**Doublez vos profits aujourd'hui !** Partagez votre lien et gagnez des revenus continus."
+        explain = "**Comment calculer vos profits ?** Pour chaque personne inscrite via votre lien qui investit, vous obtenez **2%** (**2 $ pour chaque 100 $ investis**)."
+    
+    elif current_lang == "es":
+        promo = "**¡Duplica tus ganancias hoy!** Comparte tu enlace y obtén rendimientos continuos."
+        explain = "**¿Cómo calcular tus ganancias?** Por cada persona que se registre e invierta, obtienes el **2%** (**$2 por cada $100 invertidos**)."
+    
+    elif current_lang == "ru":
+        promo = "**Удвойте свою прибыль сегодня!** Поделитесь ссылкой и получайте постоянный доход."
+        explain = "**Как рассчитать прибыль?** За каждого реферала, который инвестирует, вы получаете **2%** (**2 доллара за каждые 100 долларов инвестиций**)."
+    
+    elif current_lang == "zh":
+        promo = "**今天就让您的利润翻倍！** 分享您的专属链接，赚取持续回报。"
+        explain = "**如何計算您的利润？** 每个人通过您的链接注册并投资，您将获得 **2%** 的奖励（**每投资 100 美元可获得 2 美元**）。"
+    
+    else: # English
         promo = "**Double your profits today!** Share your custom link with friends and earn continuous returns."
         explain = "**How to calculate your profits?** For everyone who registers via your link and invests, you get **2%** of their investment (**$2 for every $100 invested**)."
         
-    # عرض النصوص مع الصاروخ والمصباح تلقائياً
+    # عرض الأقسام المرئية مع الصاروخ والمصباح بشكل فوري
     st.info(f"🚀 {promo}")
     st.markdown(f"💡 {explain}")
     
     st.write("---")
     st.subheader("Investment Commission (2%)")
     inv = st.number_input(t["inv_text"], min_value=0.0, max_value=1000.0, step=10.0)
+
 
     
     if st.button(t["inv_btn"]):
