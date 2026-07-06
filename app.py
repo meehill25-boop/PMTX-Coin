@@ -1,5 +1,8 @@
 import streamlit as st
 
+# 1. إعدادات الصفحة
+st.set_page_config(page_title="PMTX COIN", layout="centered")
+
 # 2. كود التصميم (CSS)
 st.markdown("""
     <style>
@@ -13,9 +16,7 @@ st.markdown("""
 if 'balance' not in st.session_state: st.session_state.balance = 1000.0
 if 'username' not in st.session_state: st.session_state.username = "user"
 
-
 # 4. قاموس اللغات الشامل
-# 4. قاموس اللغات المحدث (شامل المراحل والأسعار الجديدة)
 i18n = {
     "English": {
         "nav": ["Overview", "Roadmap", "Dashboard", "Presale & Referrals", "Staking", "P2P Market", "Contact Us"],
@@ -28,7 +29,7 @@ i18n = {
         "rm_footer": "PMTX is built for long-term growth.",
         "ref": "Presale & Referrals", "user_lbl": "Username:", "gen_btn": "Generate Link", "connect": "Connect Wallet",
         "bal": "Balance", "soon": "Coming Soon!", "inv_btn": "Calculate 2% Reward", "inv_text": "Enter Investment ($)",
-        "p1": "0.00007 $", "p2": "0.0002 $", "p3": "0.0005 $",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", # تم تحديث أسعار البيع المسبق بناءً على طلبك السابق
         "promo": "Double your profits! Share your link.", "explain": "Earnings System: You will receive 2% of any investment."
     },
     "العربية": {
@@ -42,7 +43,7 @@ i18n = {
         "rm_footer": "صممت PMTX للنمو طويل الأمد.",
         "ref": "البيع المسبق والإحالات", "user_lbl": "اسم المستخدم:", "gen_btn": "إنشاء الرابط", "connect": "ربط المحفظة",
         "bal": "الرصيد", "soon": "قريباً جداً!", "inv_btn": "حساب مكافأة 2%", "inv_text": "أدخل قيمة الاستثمار ($)",
-        "p1": "0.00007 $", "p2": "0.0002 $", "p3": "0.0005 $",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", # تم تحديث أسعار البيع المسبق بناءً على طلبك السابق
         "promo": "ضاعف أرباحك اليوم! شارك رابط الإحالة الخاص بك.", "explain": "نظام الأرباح: ستحصل على 2% من قيمة أي استثمار."
     },
     "日本語": {
@@ -56,7 +57,7 @@ i18n = {
         "rm_footer": "長期的な成長を目指します.",
         "ref": "プレセールと紹介", "user_lbl": "ユーザー名:", "gen_btn": "リンク生成", "connect": "ウォレット接続",
         "bal": "残高", "soon": "まもなく公開", "inv_btn": "2%報酬を計算", "inv_text": "投資額 ($)",
-        "p1": "0.00007 $", "p2": "0.0002 $", "p3": "0.0005 $",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
         "promo": "利益を2倍に！リンクをシェアして報酬を獲得。", "explain": "投資額の 2% を獲得できます。"
     },
     "Français": {
@@ -70,7 +71,7 @@ i18n = {
         "rm_footer": "PMTX conçu pour la croissance.",
         "ref": "Prévente et Parrainage", "user_lbl": "Utilisateur:", "gen_btn": "Générer", "connect": "Connecter",
         "bal": "Solde", "soon": "Bientôt", "inv_btn": "Calculer 2% récompense", "inv_text": "Investissement ($)",
-        "p1": "0.00007 $", "p2": "0.0002 $", "p3": "0.0005 $",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
         "promo": "Doublez vos profits ! Partagez votre lien.", "explain": "Vous obtenez 2% de chaque investissement."
     },
     "Español": {
@@ -83,8 +84,8 @@ i18n = {
         "rm": ["Lanzamiento", "Airdrop y Preventa", "Deflación", "Quema", "Utilidad", "Staking"],
         "rm_footer": "PMTX diseñado para crecer.",
         "ref": "Preventa y Referidos", "user_lbl": "Usuario:", "gen_btn": "Generar", "connect": "Conectar",
-        "bal": "Saldo", "soon": "Pronto", "inv_btn": "Calcular 2% recompense", "inv_text": "Inversión ($)",
-        "p1": "0.00007 $", "p2": "0.0002 $", "p3": "0.0005 $",
+        "bal": "Saldo", "soon": "Pronto", "inv_btn": "Calcular 2% recompensa", "inv_text": "Inversión ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
         "promo": "¡Duplica tus ganancias! Comparte tu enlace.", "explain": "Obtienes el 2% de cada inversión."
     },
     "Deutsch": {
@@ -98,10 +99,11 @@ i18n = {
         "rm_footer": "PMTX auf Wachstum ausgelegt.",
         "ref": "Vorverkauf & Empfehlungen", "user_lbl": "Benutzername:", "gen_btn": "Erstellen", "connect": "Verbinden",
         "bal": "Guthaben", "soon": "Bald", "inv_btn": "2% Belohnung berechnen", "inv_text": "Investition ($)",
-        "p1": "0.00007 $", "p2": "0.0002 $", "p3": "0.0005 $",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
         "promo": "Verdoppeln Sie Ihre Gewinne! Teilen Sie Ihren Link.", "explain": "Sie erhalten 2% pro Investition."
     }
 }
+
 # 5. اختيار اللغة
 lang = st.sidebar.selectbox(" Language / اللغة", list(i18n.keys()))
 t = i18n[lang]
@@ -127,13 +129,7 @@ st.markdown(f'''
         </p>
     </div>
 ''', unsafe_allow_html=True)
-# --- تنظيم الصفحات ---
 
-# صفحة Overview
-# --- تنظيم الصفحات (نسخة مصححة) ---
-
-# 1. صفحة Overview
-# 1. صفحة Overview (المحتوى المفقود)
 # --- تنظيم الصفحات ---
 
 # 1. صفحة Overview
@@ -146,32 +142,31 @@ if page == t["nav"][0]:
         usd_value = (st.session_state.balance / 1000) * 500
         st.metric("USD Balance", f"${usd_value:,.0f}")
     st.write("---")
-    # (رسالة الترحيب هنا...)
     st.success("🎉 Welcome! Wallet connected and Airdrop successfully claimed! Your current balance is 1,000 PMTX valued at 500$ 🚀")
     st.link_button("📄 View Token Smart Contract on PolygonScan", "https://polygonscan.com/token/0xc4af4aeebab3b717f771941ce7f1a3e4c765a53e#transactions", type="primary")
 
-# 2. صفحة Roadmap (المفقودة)
+# 2. صفحة Roadmap
 elif page == t["nav"][1]:
     st.subheader(f"📍 {t['roadmap_title']}")
-    
+   
     # 1. الأسعار ومراحل البيع (كلها مترجمة)
     st.markdown(f"### {t['presale_header']}")
     col1, col2, col3 = st.columns(3)
     col1.metric("Phase 1", t["p1"])
     col2.metric("Phase 2", t["p2"])
     col3.metric("Phase 3", t["p3"])
-    
+   
     # 2. السعر المستهدف
     st.markdown(f"**{t['target_price']}** 🚀 <span style='color: #FFD700; font-size: 24px;'>0.50 $</span>", unsafe_allow_html=True)
-    
+   
     st.divider()
-    
-    # 3. محتوى خارطة الطريق المترجم بالكامل
+   
+    # 3. محتوى خارطة الطريق המترجم بالكامل
     c1, c2, c3 = st.columns(3)
     c1.markdown(f"#### {t['rm'][0]}\n{t['rm'][1]}")
     c2.markdown(f"#### {t['rm'][2]}\n{t['rm'][3]}")
     c3.markdown(f"#### {t['rm'][4]}\n{t['rm'][5]}")
-    
+   
     st.divider()
     st.info(t["rm_footer"])
 
@@ -183,16 +178,30 @@ elif page == t["nav"][2]:
     col2.metric("Referrals", "0")
     col3.metric("Growth", "+15%")
 
-# 4. صفحة Presale & Referrals
+# 4. صفحة Presale & Referrals (تمت إضافة حقل اسم المستخدم وإنشاء الرابط)
 elif page == t["nav"][3]:
     st.subheader(f"🔗 {t['ref']}")
-    # (كود الإحالات والحاسبة هنا...)
+   
+    # قسم إنشاء رابط الإحالة
     st.info(f"🚀 {t['promo']}")
+    user_input = st.text_input(t["user_lbl"], value=st.session_state.username)
+   
+    if st.button(t["gen_btn"]):
+        st.session_state.username = user_input
+        # يمكنك تغيير 'pmtx-coin-official2026.streamlit.app' برابط موقعك الحقيقي لاحقاً
+        ref_link = f"https://pmtx-coin-official2026.streamlit.app/?ref={user_input}"
+        st.success(f"🔗 Your Referral Link: {ref_link}")
+        st.code(ref_link, language="text")
+   
+    st.divider()
+   
+    # قسم حاسبة الاستثمار
     st.warning(f"💡 {t['explain']}")
     inv = st.number_input(t["inv_text"], min_value=0.0, step=10.0)
     if st.button(t["inv_btn"]):
         commission = inv * 0.02
         st.session_state.balance += commission
+        st.success(f"🎉 2% Commission Calculated: ${commission:,.2f} added to your balance!")
         st.rerun()
 
 # 5. الصفحات التي قيد الإنشاء (Staking & P2P)
@@ -203,9 +212,7 @@ elif page in [t["nav"][4], t["nav"][5]]:
 elif page == t["nav"][6]:
     st.subheader("✉️ اتصل بنا / Contact Us")
     with st.form("contact_form"):
-        st.text_input("الاسم")
-        st.text_area("رسالتك")
-        st.form_submit_button("إرسال")
-
-elif page in [t["nav"][4], t["nav"][5]]: # Coming Soon (الاستثمار و P2P)
-    st.markdown(f'<div class="soon-box">{t["soon"]}</div>', unsafe_allow_html=True)
+        # طلب مساعدة سابقة بخصوص اسم مستعار
+        st.text_input("Name (You can use a pseudonym)")
+        st.text_area("رسالتك / Message")
+        st.form_submit_button("إرسال / Submit")
