@@ -22,85 +22,75 @@ i18n = {
         "nav": ["Overview", "Roadmap", "Dashboard", "Presale & Referrals", "Staking", "P2P Market", "Contact Us"],
         "hero": "PMTX COIN: Future of Finance", "sub": "Staking, Burns, & Massive Growth.",
         "hero_desc": "Join our ecosystem. Deflationary burn & protocols ensuring growth.",
-        "roadmap_title": "Project Roadmap",
-        "presale_header": "💎 PMTX Presale Stages",
-        "target_price": "Final Listing Target Price:",
-        "rm": ["Phase 1: Launch", "Airdrop & Presale", "Phase 2: Deflation", "Token Burn", "Phase 3: Utility", "Staking & P2P"],
-        "rm_footer": "PMTX is built for long-term growth.",
-        "ref": "Presale & Referrals", "user_lbl": "Username:", "gen_btn": "Generate Link", "connect": "Connect Wallet",
-        "bal": "Balance", "soon": "Coming Soon!", "inv_btn": "Calculate 2% Reward", "inv_text": "Enter Investment ($)",
-        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", # تم تحديث أسعار البيع المسبق بناءً على طلبك السابق
-        "promo": "Double your profits! Share your link.", "explain": "Earnings System: You will receive 2% of any investment."
+        "roadmap_title": "Project Roadmap", "presale_header": "💎 PMTX Presale Stages",
+        "target_price": "Final Listing Target Price:", "rm": ["Phase 1: Launch", "Airdrop & Presale", "Phase 2: Deflation", "Token Burn", "Phase 3: Utility", "Staking & P2P"],
+        "rm_footer": "PMTX is built for long-term growth.", "ref": "Presale & Referrals", "user_lbl": "Username:", "gen_btn": "Generate Link",
+        "connect": "Connect Wallet", "bal": "Balance", "soon": "Coming Soon!", "inv_btn": "Calculate 2% Reward", "inv_text": "Enter Investment ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "Double your profits!", "explain": "2% of investment reward.",
+        "airdrop_title": "Airdrop Options", "opt1": "Complete Tasks (1,000 PMTX)", "task_desc": "Follow, Like, Retweet & Tag 3 friends.",
+        "opt2": "Express Claim (500 PMTX)", "express_desc": "Get 500 PMTX instantly without social tasks.", "fee_desc": "Fee: 0.3$ (Developer Fee + Gas).",
+        "wallet_info": "Ensure your wallet is on the Polygon Network.", "connect_pay": "Connect Wallet & Pay 0.3$ Fee", "already_claimed": "✅ Airdrop already claimed!"
     },
     "العربية": {
         "nav": ["نظرة عامة", "خارطة الطريق", "لوحة التحكم", "البيع المسبق والإحالات", "قريباً التخزين", "سوق البيع بين الأعضاء", "اتصل بنا"],
         "hero": "عملة PMTX: مستقبل التمويل", "sub": "تخزين، حرق، ونمو هائل.",
         "hero_desc": "انضم لنظامنا البيئي المتكامل. بروتوكولات الأمان تضمن نمو أصولك.",
-        "roadmap_title": "خارطة الطريق",
-        "presale_header": "💎 مراحل البيع المسبق لـ PMTX",
-        "target_price": "سعر الإدراج النهائي المستهدف:",
-        "rm": ["المرحلة 1: الانطلاق", "الإيردروب والبيع المسبق", "المرحلة 2: الانكماش", "حرق العملات", "المرحلة 3: المنفعة", "عائدات التخزين"],
-        "rm_footer": "صممت PMTX للنمو طويل الأمد.",
-        "ref": "البيع المسبق والإحالات", "user_lbl": "اسم المستخدم:", "gen_btn": "إنشاء الرابط", "connect": "ربط المحفظة",
-        "bal": "الرصيد", "soon": "قريباً جداً!", "inv_btn": "حساب مكافأة 2%", "inv_text": "أدخل قيمة الاستثمار ($)",
-        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", # تم تحديث أسعار البيع المسبق بناءً على طلبك السابق
-        "promo": "ضاعف أرباحك اليوم! شارك رابط الإحالة الخاص بك.", "explain": "نظام الأرباح: ستحصل على 2% من قيمة أي استثمار."
+        "roadmap_title": "خارطة الطريق", "presale_header": "💎 مراحل البيع المسبق",
+        "target_price": "سعر الإدراج النهائي:", "rm": ["المرحلة 1: الانطلاق", "الإيردروب والبيع المسبق", "المرحلة 2: الانكماش", "حرق العملات", "المرحلة 3: المنفعة", "عائدات التخزين"],
+        "rm_footer": "صممت PMTX للنمو طويل الأمد.", "ref": "البيع المسبق والإحالات", "user_lbl": "اسم المستخدم:", "gen_btn": "إنشاء الرابط",
+        "connect": "ربط المحفظة", "bal": "الرصيد", "soon": "قريباً جداً!", "inv_btn": "حساب مكافأة 2%", "inv_text": "أدخل قيمة الاستثمار ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "ضاعف أرباحك اليوم!", "explain": "مكافأة 2% من الاستثمار.",
+        "airdrop_title": "خيارات الإيردروب", "opt1": "إكمال المهام (1,000 PMTX)", "task_desc": "تابع، أعجب، أعد تغريد وتاغ لـ 3 أصدقاء.",
+        "opt2": "الاستلام السريع (500 PMTX)", "express_desc": "احصل على 500 PMTX فوراً بدون مهام.", "fee_desc": "الرسوم: 0.3$ (رسوم مطور + شبكة).",
+        "wallet_info": "تأكد من أن محفظتك على شبكة Polygon.", "connect_pay": "ربط المحفظة ودفع رسوم 0.3$", "already_claimed": "✅ تم استلام الإيردروب مسبقاً!"
     },
     "日本語": {
         "nav": ["概要", "ロードマップ", "ダッシュボード", "プレセール", "ステーキング", "P2P市場", "お問い合わせ"],
-        "hero": "PMTX COIN: 金融の未来", "sub": "ステーキングと成長.",
-        "hero_desc": "堅牢なエコシステムに参加しましょう.",
-        "roadmap_title": "ロードマップ",
-        "presale_header": "💎 PMTX プレセール段階",
-        "target_price": "最終上場目標価格:",
-        "rm": ["開始", "エアドロップとプレセール", "デフレ", "バーン", "ユーティリティ", "ステーキング"],
-        "rm_footer": "長期的な成長を目指します.",
-        "ref": "プレセールと紹介", "user_lbl": "ユーザー名:", "gen_btn": "リンク生成", "connect": "ウォレット接続",
-        "bal": "残高", "soon": "まもなく公開", "inv_btn": "2%報酬を計算", "inv_text": "投資額 ($)",
-        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
-        "promo": "利益を2倍に！リンクをシェアして報酬を獲得。", "explain": "投資額の 2% を獲得できます。"
+        "hero": "PMTX COIN: 金融の未来", "sub": "ステーキングと成長.", "hero_desc": "堅牢なエコシステム.",
+        "roadmap_title": "ロードマップ", "presale_header": "💎 PMTX プレセール",
+        "target_price": "最終上場目標:", "rm": ["開始", "エアドロップ", "デフレ", "バーン", "ユーティリティ", "ステーキング"],
+        "rm_footer": "長期的な成長.", "ref": "プレセール", "user_lbl": "ユーザー名:", "gen_btn": "リンク生成",
+        "connect": "ウォレット接続", "bal": "残高", "soon": "まもなく", "inv_btn": "2%報酬計算", "inv_text": "投資額 ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "利益を2倍に!", "explain": "投資額の2%.",
+        "airdrop_title": "エアドロップオプション", "opt1": "タスク完了 (1,000 PMTX)", "task_desc": "フォロー、いいね、RT、3人タグ付け。",
+        "opt2": "クイック請求 (500 PMTX)", "express_desc": "ソーシャルタスクなしで即時取得.", "fee_desc": "手数料: 0.3$ (開発費+ガス代).",
+        "wallet_info": "Polygonネットワークを確認.", "connect_pay": "接続 & 0.3$支払い", "already_claimed": "✅ 受取済み!"
     },
     "Français": {
         "nav": ["Aperçu", "Roadmap", "Tableau", "Prévente", "Staking", "Marché P2P", "Contact"],
-        "hero": "PMTX COIN: Futur financier", "sub": "Staking et Croissance.",
-        "hero_desc": "Rejoignez notre écosystème robuste.",
-        "roadmap_title": "Feuille de route",
-        "presale_header": "💎 Étapes de prévente PMTX",
-        "target_price": "Prix cible final:",
-        "rm": ["Lancement", "Airdrop et Prévente", "Déflation", "Burn", "Utilité", "Staking"],
-        "rm_footer": "PMTX conçu pour la croissance.",
-        "ref": "Prévente et Parrainage", "user_lbl": "Utilisateur:", "gen_btn": "Générer", "connect": "Connecter",
-        "bal": "Solde", "soon": "Bientôt", "inv_btn": "Calculer 2% récompense", "inv_text": "Investissement ($)",
-        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
-        "promo": "Doublez vos profits ! Partagez votre lien.", "explain": "Vous obtenez 2% de chaque investissement."
+        "hero": "PMTX COIN: Futur financier", "sub": "Staking et Croissance.", "hero_desc": "Rejoignez notre écosystème.",
+        "roadmap_title": "Roadmap", "presale_header": "💎 Étapes de prévente",
+        "target_price": "Prix cible final:", "rm": ["Lancement", "Airdrop", "Déflation", "Burn", "Utilité", "Staking"],
+        "rm_footer": "Croissance long terme.", "ref": "Prévente et Parrainage", "user_lbl": "Utilisateur:", "gen_btn": "Générer",
+        "connect": "Connecter", "bal": "Solde", "soon": "Bientôt", "inv_btn": "Calculer 2% récompense", "inv_text": "Investissement ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "Doublez vos profits!", "explain": "2% de récompense.",
+        "airdrop_title": "Options d'Airdrop", "opt1": "Tâches (1,000 PMTX)", "task_desc": "Suivre, Aimer, RT et taguer 3 amis.",
+        "opt2": "Réclamation Express (500 PMTX)", "express_desc": "Obtenez 500 PMTX instantanément.", "fee_desc": "Frais: 0.3$ (Dev + Gaz).",
+        "wallet_info": "Assurez-vous d'être sur Polygon.", "connect_pay": "Connecter & Payer 0.3$", "already_claimed": "✅ Déjà réclamé !"
     },
     "Español": {
         "nav": ["Resumen", "Hoja de ruta", "Panel", "Preventa", "Staking", "Mercado P2P", "Contacto"],
-        "hero": "PMTX COIN: Futuro financiero", "sub": "Staking y Crecimiento.",
-        "hero_desc": "Únase a nuestro ecosistema robusto.",
-        "roadmap_title": "Hoja de ruta",
-        "presale_header": "💎 Etapas de preventa de PMTX",
-        "target_price": "Precio objetivo final:",
-        "rm": ["Lanzamiento", "Airdrop y Preventa", "Deflación", "Quema", "Utilidad", "Staking"],
-        "rm_footer": "PMTX diseñado para crecer.",
-        "ref": "Preventa y Referidos", "user_lbl": "Usuario:", "gen_btn": "Generar", "connect": "Conectar",
-        "bal": "Saldo", "soon": "Pronto", "inv_btn": "Calcular 2% recompensa", "inv_text": "Inversión ($)",
-        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
-        "promo": "¡Duplica tus ganancias! Comparte tu enlace.", "explain": "Obtienes el 2% de cada inversión."
+        "hero": "PMTX COIN: Futuro financiero", "sub": "Staking y Crecimiento.", "hero_desc": "Ecosistema robusto.",
+        "roadmap_title": "Hoja de ruta", "presale_header": "💎 Etapas de preventa",
+        "target_price": "Precio objetivo:", "rm": ["Lanzamiento", "Airdrop", "Deflación", "Quema", "Utilidad", "Staking"],
+        "rm_footer": "Diseñado para crecer.", "ref": "Preventa y Referidos", "user_lbl": "Usuario:", "gen_btn": "Generar",
+        "connect": "Conectar", "bal": "Saldo", "soon": "Pronto", "inv_btn": "Calcular 2% recompensa", "inv_text": "Inversión ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "¡Duplica tus ganancias!", "explain": "2% de recompensa.",
+        "airdrop_title": "Opciones de Airdrop", "opt1": "Tareas (1,000 PMTX)", "task_desc": "Seguir, Like, RT y taguer 3 amigos.",
+        "opt2": "Reclamo Express (500 PMTX)", "express_desc": "Obtén 500 PMTX al instante.", "fee_desc": "Tarifa: 0.3$ (Dev + Gas).",
+        "wallet_info": "Asegúrate de estar en Polygon.", "connect_pay": "Conectar & Pagar 0.3$", "already_claimed": "✅ ¡Ya reclamado!"
     },
     "Deutsch": {
         "nav": ["Überblick", "Roadmap", "Dashboard", "Vorverkauf", "Staking", "P2P-Markt", "Kontakt"],
-        "hero": "PMTX COIN: Finanzzukunft", "sub": "Staking und Wachstum.",
-        "hero_desc": "Werden Sie Teil unseres Ökosystems.",
-        "roadmap_title": "Roadmap",
-        "presale_header": "💎 PMTX Vorverkaufsphasen",
-        "target_price": "Endgültiger Zielpreis:",
-        "rm": ["Start", "Airdrop und Vorverkauf", "Deflation", "Burn", "Nutzen", "Staking"],
-        "rm_footer": "PMTX auf Wachstum ausgelegt.",
-        "ref": "Vorverkauf & Empfehlungen", "user_lbl": "Benutzername:", "gen_btn": "Erstellen", "connect": "Verbinden",
-        "bal": "Guthaben", "soon": "Bald", "inv_btn": "2% Belohnung berechnen", "inv_text": "Investition ($)",
-        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $",
-        "promo": "Verdoppeln Sie Ihre Gewinne! Teilen Sie Ihren Link.", "explain": "Sie erhalten 2% pro Investition."
+        "hero": "PMTX COIN: Finanzzukunft", "sub": "Staking und Wachstum.", "hero_desc": "Robustes Ökosystem.",
+        "roadmap_title": "Roadmap", "presale_header": "💎 Vorverkaufsphasen",
+        "target_price": "Zielpreis:", "rm": ["Start", "Airdrop", "Deflation", "Burn", "Nutzen", "Staking"],
+        "rm_footer": "Auf Wachstum ausgelegt.", "ref": "Vorverkauf & Empfehlungen", "user_lbl": "Benutzername:", "gen_btn": "Erstellen",
+        "connect": "Verbinden", "bal": "Guthaben", "soon": "Bald", "inv_btn": "2% Belohnung", "inv_text": "Investition ($)",
+        "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "Verdoppeln Sie Ihre Gewinne!", "explain": "2% Belohnung.",
+        "airdrop_title": "Airdrop-Optionen", "opt1": "Aufgaben (1,000 PMTX)", "task_desc": "Folgen, Like, RT & markiere 3 Freunde.",
+        "opt2": "Express-Anspruch (500 PMTX)", "express_desc": "Erhalte 500 PMTX sofort.", "fee_desc": "Gebühr: 0.3$ (Dev + Gas).",
+        "wallet_info": "Stelle sicher, dass du im Polygon-Netzwerk bist.", "connect_pay": "Verbinden & 0.3$ zahlen", "already_claimed": "✅ Beansprucht!"
     }
 }
 
@@ -146,15 +136,15 @@ if page == t["nav"][0]:
     st.write("---")
     st.link_button("📄 View Token Smart Contract on PolygonScan", "https://polygonscan.com/token/0xc4af4aeebab3b717f771941ce7f1a3e4c765a53e#transactions", type="primary")
 
-    # --- هنا نضع نظام الإيردروب الجديد ---
+    # --- نظام الإيردروب المعرب ---
     if not st.session_state.get('airdrop_claimed', False):
-        st.markdown("### 🚀 Airdrop Options")
+        st.markdown(f"### 🚀 {t.get('airdrop_title', 'Airdrop Options')}")
         
         # الخيار الأول: المهام (1000 عملة)
-        with st.expander("✅ Option 1: Complete Tasks (1,000 PMTX)"):
-            st.write("Follow, Like, Retweet & Tag 3 friends.")
-            tweet_link = st.text_input("Tweet Link:")
-            if st.button("Verify & Get 1,000 PMTX"):
+        with st.expander(f"✅ {t.get('opt1', 'Complete Tasks (1,000 PMTX)')}"):
+            st.write(t.get('task_desc', 'Follow, Like, Retweet & Tag 3 friends.'))
+            tweet_link = st.text_input(t.get('tweet_input', 'Tweet Link:'))
+            if st.button(t.get('verify_btn', 'Verify & Get 1,000 PMTX')):
                 if tweet_link:
                     st.session_state.balance += 1000.0
                     st.session_state.airdrop_claimed = True
@@ -162,21 +152,19 @@ if page == t["nav"][0]:
                     st.rerun()
 
         # الخيار الثاني: الاستلام السريع (500 عملة مقابل 0.3$ رسوم)
-        with st.expander("⚡ Option 2: Express Claim (500 PMTX)"):
-            st.write("Get 500 PMTX instantly without social tasks.")
-            st.write("Fee: 0.3$ (Developer Fee + Network Gas).")
+        with st.expander(f"⚡ {t.get('opt2', 'Express Claim (500 PMTX)')}"):
+            st.write(t.get('express_desc', 'Get 500 PMTX instantly without social tasks.'))
+            st.write(t.get('fee_desc', 'Fee: 0.3$ (Developer Fee + Network Gas).'))
             
-            st.info("Ensure your wallet is on the Polygon Network.")
-            if st.button("Connect Wallet & Pay 0.3$ Fee"):
-                # هنا يتم وضع كود الربط الفعلي لاحقاً
-                st.write("Processing transaction on Polygon...")
-                # محاكاة لعملية الدفع
+            st.info(t.get('wallet_info', 'Ensure your wallet is on the Polygon Network.'))
+            if st.button(t.get('connect_pay', 'Connect Wallet & Pay 0.3$ Fee')):
+                st.write("Processing...")
                 st.session_state.balance += 500.0
                 st.session_state.airdrop_claimed = True
-                st.success("Transaction Confirmed! 500 PMTX received.")
+                st.success("Transaction Confirmed!")
                 st.rerun()
     else:
-        st.success("✅ Airdrop already claimed!")
+        st.success(t.get('already_claimed', '✅ Airdrop already claimed!'))
 # 2. صفحة Roadmap
 elif page == t["nav"][1]:
     st.subheader(f"📍 {t['roadmap_title']}")
