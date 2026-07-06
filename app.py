@@ -132,15 +132,13 @@ st.markdown(f'''
 
 # --- تنظيم الصفحات ---
 
-# 1. صفحة Overview
 # 1. ابحث عن صفحة الـ Overview في كودك
+# 1. صفحة Overview
 if page == t["nav"][0]:
     st.subheader(f"💰 {t['bal']}")
     col_bal1, col_bal2 = st.columns(2)
     with col_bal1:
         st.metric("PMTX", f"{st.session_state.balance:,.0f}")
-    
-    # [هنا ضع كود الحساب المالي الجديد]
     with col_bal2:
         usd_value = st.session_state.balance * 0.2
         st.metric("USD Value (Listing $0.2)", f"${usd_value:,.2f}")
@@ -148,25 +146,37 @@ if page == t["nav"][0]:
     st.write("---")
     st.link_button("📄 View Token Smart Contract on PolygonScan", "https://polygonscan.com/token/0xc4af4aeebab3b717f771941ce7f1a3e4c765a53e#transactions", type="primary")
 
-    # [هنا ضع كود قسم المهام في الأسفل مباشرة]
-    if 'airdrop_claimed' not in st.session_state: st.session_state.airdrop_claimed = False
-    
-    if not st.session_state.airdrop_claimed:
-        st.markdown(f"### 🚀 Claim 1,000 PMTX Airdrop")
-        st.write("✅ Follow @PMTXCoin on X")
-        st.write("✅ Like & Retweet & Tag 3 friends")
+    # --- هنا نضع نظام الإيردروب الجديد ---
+    if not st.session_state.get('airdrop_claimed', False):
+        st.markdown("### 🚀 Airdrop Options")
         
-        tweet_link = st.text_input("Enter your tweet link:")
-        if st.button("Verify & Claim"):
-            if tweet_link:
-                st.session_state.balance += 1000.0
+        # الخيار الأول: المهام (1000 عملة)
+        with st.expander("✅ Option 1: Complete Tasks (1,000 PMTX)"):
+            st.write("Follow, Like, Retweet & Tag 3 friends.")
+            tweet_link = st.text_input("Tweet Link:")
+            if st.button("Verify & Get 1,000 PMTX"):
+                if tweet_link:
+                    st.session_state.balance += 1000.0
+                    st.session_state.airdrop_claimed = True
+                    st.success("Success!")
+                    st.rerun()
+
+        # الخيار الثاني: الاستلام السريع (500 عملة مقابل 0.3$ رسوم)
+        with st.expander("⚡ Option 2: Express Claim (500 PMTX)"):
+            st.write("Get 500 PMTX instantly without social tasks.")
+            st.write("Fee: 0.3$ (Developer Fee + Network Gas).")
+            
+            st.info("Ensure your wallet is on the Polygon Network.")
+            if st.button("Connect Wallet & Pay 0.3$ Fee"):
+                # هنا يتم وضع كود الربط الفعلي لاحقاً
+                st.write("Processing transaction on Polygon...")
+                # محاكاة لعملية الدفع
+                st.session_state.balance += 500.0
                 st.session_state.airdrop_claimed = True
-                st.success("🎉 1,000 PMTX added!")
+                st.success("Transaction Confirmed! 500 PMTX received.")
                 st.rerun()
-            else:
-                st.error("Please enter a link")
     else:
-        st.success("✅ Airdrop Claimed!")
+        st.success("✅ Airdrop already claimed!")
 # 2. صفحة Roadmap
 elif page == t["nav"][1]:
     st.subheader(f"📍 {t['roadmap_title']}")
