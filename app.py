@@ -22,7 +22,7 @@ if 'twitter_linked' not in st.session_state: st.session_state.twitter_linked = F
 if 'pending_reward' not in st.session_state: st.session_state.pending_reward = 1000
 if 'airdrop_claimed' not in st.session_state: st.session_state.airdrop_claimed = False
 
-# 4. قاموس اللغات الشامل
+# 4. قاموس اللغات الشامل (مُحدث بالكامل)
 i18n = {
     "English": {
         "nav": ["Overview", "Roadmap", "Dashboard", "Presale & Referrals", "Staking", "P2P Market", "Contact Us"],
@@ -39,7 +39,9 @@ i18n = {
         "go_to_twitter": "📢 Go to Twitter/X Post", "tweet_input": "Enter your tweet link:", "verify_btn": "Verify & Get 1,000 PMTX",
         "setup_required": "🔒 Complete Setup to Claim Airdrop", "connect_wallet": "🔗 Connect Wallet (Polygon)",
         "link_twitter": "🐦 Link Twitter Account", "wallet_success": "✅ Wallet Connected", "twitter_success": "✅ Twitter Account Linked",
-        "pending_text": "Pending Reward", "pay_btn": "Pay 0.3$ & Claim"
+        "pending_text": "Pending Reward", "pay_btn": "Pay 0.3$ & Claim",
+        "roadmap_details": ["Q3 2026: Launch", "Q4 2026: Staking", "Q1 2027: Listing"],
+        "why_pmtx": "Why PMTX? We bridge scarcity with decentralized efficiency. Through deflationary burns and staking, we don't just follow trends; we build a sustainable digital economy. Join us to prioritize your assets' growth."
     },
     "العربية": {
         "nav": ["نظرة عامة", "خارطة الطريق", "لوحة التحكم", "البيع المسبق والإحالات", "قريباً التخزين", "سوق البيع بين الأعضاء", "اتصل بنا"],
@@ -56,7 +58,9 @@ i18n = {
         "go_to_twitter": "📢 انتقل إلى تغريدة تويتر/X", "tweet_input": "أدخل رابط التغريدة:", "verify_btn": "تحقق واستلم 1,000 PMTX",
         "setup_required": "🔒 أكمل الإعدادات للمطالبة بالإيردروب", "connect_wallet": "🔗 ربط المحفظة (Polygon)",
         "link_twitter": "🐦 ربط حساب تويتر", "wallet_success": "✅ تم ربط المحفظة", "twitter_success": "✅ تم ربط حساب تويتر",
-        "pending_text": "الجائزة المعلقة", "pay_btn": "ادفع 0.3$ واستلم"
+        "pending_text": "الجائزة المعلقة", "pay_btn": "ادفع 0.3$ واستلم",
+        "roadmap_details": ["الربع الثالث 2026: الإطلاق", "الربع الرابع 2026: التخزين", "الربع الأول 2027: الإدراج"],
+        "why_pmtx": "لماذا PMTX؟ نحن ندمج الندرة مع كفاءة التمويل اللامركزي. من خلال آليات الحرق المبرمج وعوائد التخزين، نحن لا نتبع الترند، بل نبني اقتصاداً رقمياً مستداماً. انضم إلينا لتعزيز نمو أصولك."
     },
     "日本語": {
         "nav": ["概要", "ロードマップ", "ダッシュボード", "プレセール", "ステーキング", "P2P市場", "お問い合わせ"],
@@ -72,7 +76,9 @@ i18n = {
         "go_to_twitter": "📢 Twitter/X投稿へ移動", "tweet_input": "ツイートリンクを入力:", "verify_btn": "確認して1,000 PMTXを取得",
         "setup_required": "🔒 エアドロップ請求のための設定", "connect_wallet": "🔗 ウォレット接続 (Polygon)",
         "link_twitter": "🐦 Twitter連携", "wallet_success": "✅ 接続済み", "twitter_success": "✅ 連携済み",
-        "pending_text": "保留中の報酬", "pay_btn": "0.3$払って取得"
+        "pending_text": "保留中の報酬", "pay_btn": "0.3$払って取得",
+        "roadmap_details": ["2026 Q3: 開始", "2026 Q4: ステーキング", "2027 Q1: 上場"],
+        "why_pmtx": "PMTXを選ぶ理由：希少性と分散型効率の融合。デフレ燃焼メカニズムとステーキングにより、単なるトレンドではなく、持続可能なデジタル経済を構築します。資産の成長のために私たちに参加してください。"
     },
     "Français": {
         "nav": ["Aperçu", "Roadmap", "Tableau", "Prévente", "Staking", "Marché P2P", "Contact"],
@@ -88,7 +94,9 @@ i18n = {
         "go_to_twitter": "📢 Aller au tweet Twitter/X", "tweet_input": "Entrez le lien du tweet :", "verify_btn": "Vérifier & Réclamer 1,000 PMTX",
         "setup_required": "🔒 Configuration pour l'Airdrop", "connect_wallet": "🔗 Connecter le portefeuille",
         "link_twitter": "🐦 Lier Twitter", "wallet_success": "✅ Portefeuille connecté", "twitter_success": "✅ Twitter lié",
-        "pending_text": "Récompense en attente", "pay_btn": "Payer 0.3$ & Réclamer"
+        "pending_text": "Récompense en attente", "pay_btn": "Payer 0.3$ & Réclamer",
+        "roadmap_details": ["T3 2026: Lancement", "T4 2026: Staking", "T1 2027: Cotation"],
+        "why_pmtx": "Pourquoi PMTX ? Nous allions rareté et efficacité décentralisée. Grâce au mécanisme de burn et au staking, nous ne suivons pas seulement les tendances ; nous bâtissons une économie numérique durable. Rejoignez-nous pour la croissance de vos actifs."
     },
     "Español": {
         "nav": ["Resumen", "Hoja de ruta", "Panel", "Preventa", "Staking", "Mercado P2P", "Contacto"],
@@ -104,7 +112,9 @@ i18n = {
         "go_to_twitter": "📢 Ir a la publicación de Twitter/X", "tweet_input": "Ingresa el enlace del tweet:", "verify_btn": "Verificar y Reclamar 1,000 PMTX",
         "setup_required": "🔒 Configuración para Airdrop", "connect_wallet": "🔗 Conectar billetera",
         "link_twitter": "🐦 Vincular Twitter", "wallet_success": "✅ Billetera conectada", "twitter_success": "✅ Twitter vinculado",
-        "pending_text": "Recompensa pendiente", "pay_btn": "Pagar 0.3$ y Reclamar"
+        "pending_text": "Recompensa pendiente", "pay_btn": "Pagar 0.3$ y Reclamar",
+        "roadmap_details": ["T3 2026: Lanzamiento", "T4 2026: Staking", "T1 2027: Listado"],
+        "why_pmtx": "¿Por qué PMTX? Unimos escasez con eficiencia descentralizada. A través de quemas deflacionarias y staking, no solo seguimos tendencias; construimos una economía digital sostenible. Únete para priorizar el crecimiento de tus activos."
     },
     "Deutsch": {
         "nav": ["Überblick", "Roadmap", "Dashboard", "Vorverkauf", "Staking", "P2P-Markt", "Kontakt"],
@@ -120,9 +130,12 @@ i18n = {
         "go_to_twitter": "📢 Zum Twitter/X-Beitrag", "tweet_input": "Tweet-Link eingeben:", "verify_btn": "Verifizieren & 1,000 PMTX erhalten",
         "setup_required": "🔒 Airdrop-Einrichtung", "connect_wallet": "🔗 Wallet verbinden",
         "link_twitter": "🐦 Twitter verknüpfen", "wallet_success": "✅ Wallet verbunden", "twitter_success": "✅ Twitter verknüpft",
-        "pending_text": "Ausstehende Belohnung", "pay_btn": "0.3$ zahlen & Anspruch"
+        "pending_text": "Ausstehende Belohnung", "pay_btn": "0.3$ zahlen & Anspruch",
+        "roadmap_details": ["Q3 2026: Start", "Q4 2026: Staking", "Q1 2027: Listung"],
+        "why_pmtx": "Warum PMTX? Wir verbinden Knappheit mit dezentraler Effizienz. Durch Deflations-Burns und Staking folgen wir nicht nur Trends, sondern bauen eine nachhaltige digitale Wirtschaft auf. Schließen Sie sich uns an."
     }
 }
+
 # 5. اختيار اللغة
 lang = st.sidebar.selectbox(" Language / اللغة", list(i18n.keys()))
 t = i18n[lang]
@@ -212,25 +225,29 @@ if page == t["nav"][0]:
 # 2. صفحة Roadmap
 elif page == t["nav"][1]:
     st.subheader(f"📍 {t['roadmap_title']}")
-   
-    # 1. الأسعار ومراحل البيع (كلها مترجمة)
+    
+    # نص تسويقي مقنع وجديد
+    st.info(t["why_pmtx"])
+    
+    # 1. الأسعار ومراحل البيع
     st.markdown(f"### {t['presale_header']}")
     col1, col2, col3 = st.columns(3)
     col1.metric("Phase 1", t["p1"])
     col2.metric("Phase 2", t["p2"])
     col3.metric("Phase 3", t["p3"])
-   
+    
     # 2. السعر المستهدف
     st.markdown(f"**{t['target_price']}** 🚀 <span style='color: #FFD700; font-size: 24px;'>0.50 $</span>", unsafe_allow_html=True)
-   
+    
     st.divider()
-   
-    # 3. محتوى خارطة الطريق המترجم بالكامل
+    
+    # 3. خارطة الطريق
+    st.markdown("### 🗓️ Project Timeline")
     c1, c2, c3 = st.columns(3)
-    c1.markdown(f"#### {t['rm'][0]}\n{t['rm'][1]}")
-    c2.markdown(f"#### {t['rm'][2]}\n{t['rm'][3]}")
-    c3.markdown(f"#### {t['rm'][4]}\n{t['rm'][5]}")
-   
+    c1.markdown(f"#### {t['roadmap_details'][0]}")
+    c2.markdown(f"#### {t['roadmap_details'][1]}")
+    c3.markdown(f"#### {t['roadmap_details'][2]}")
+    
     st.divider()
     st.info(t["rm_footer"])
 
