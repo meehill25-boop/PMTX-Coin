@@ -29,7 +29,8 @@ i18n = {
         "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "Double your profits!", "explain": "2% of investment reward.",
         "airdrop_title": "Airdrop Options", "opt1": "Complete Tasks (1,000 PMTX)", "task_desc": "Follow, Like, Retweet & Tag 3 friends.",
         "opt2": "Express Claim (500 PMTX)", "express_desc": "Get 500 PMTX instantly without social tasks.", "fee_desc": "Fee: 0.3$ (Developer Fee + Gas).",
-        "wallet_info": "Ensure your wallet is on the Polygon Network.", "connect_pay": "Connect Wallet & Pay 0.3$ Fee", "already_claimed": "✅ Airdrop already claimed!"
+        "wallet_info": "Ensure your wallet is on the Polygon Network.", "connect_pay": "Connect Wallet & Pay 0.3$ Fee", "already_claimed": "✅ Airdrop already claimed!",
+        "go_to_twitter": "📢 Go to Twitter/X Post", "tweet_input": "Enter your tweet link:", "verify_btn": "Verify & Get 1,000 PMTX"
     },
     "العربية": {
         "nav": ["نظرة عامة", "خارطة الطريق", "لوحة التحكم", "البيع المسبق والإحالات", "قريباً التخزين", "سوق البيع بين الأعضاء", "اتصل بنا"],
@@ -42,7 +43,8 @@ i18n = {
         "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "ضاعف أرباحك اليوم!", "explain": "مكافأة 2% من الاستثمار.",
         "airdrop_title": "خيارات الإيردروب", "opt1": "إكمال المهام (1,000 PMTX)", "task_desc": "تابع، أعجب، أعد تغريد وتاغ لـ 3 أصدقاء.",
         "opt2": "الاستلام السريع (500 PMTX)", "express_desc": "احصل على 500 PMTX فوراً بدون مهام.", "fee_desc": "الرسوم: 0.3$ (رسوم مطور + شبكة).",
-        "wallet_info": "تأكد من أن محفظتك على شبكة Polygon.", "connect_pay": "ربط المحفظة ودفع رسوم 0.3$", "already_claimed": "✅ تم استلام الإيردروب مسبقاً!"
+        "wallet_info": "تأكد من أن محفظتك على شبكة Polygon.", "connect_pay": "ربط المحفظة ودفع رسوم 0.3$", "already_claimed": "✅ تم استلام الإيردروب مسبقاً!",
+        "go_to_twitter": "📢 انتقل إلى تغريدة تويتر/X", "tweet_input": "أدخل رابط التغريدة:", "verify_btn": "تحقق واستلم 1,000 PMTX"
     },
     "日本語": {
         "nav": ["概要", "ロードマップ", "ダッシュボード", "プレセール", "ステーキング", "P2P市場", "お問い合わせ"],
@@ -54,7 +56,8 @@ i18n = {
         "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "利益を2倍に!", "explain": "投資額の2%.",
         "airdrop_title": "エアドロップオプション", "opt1": "タスク完了 (1,000 PMTX)", "task_desc": "フォロー、いいね、RT、3人タグ付け。",
         "opt2": "クイック請求 (500 PMTX)", "express_desc": "ソーシャルタスクなしで即時取得.", "fee_desc": "手数料: 0.3$ (開発費+ガス代).",
-        "wallet_info": "Polygonネットワークを確認.", "connect_pay": "接続 & 0.3$支払い", "already_claimed": "✅ 受取済み!"
+        "wallet_info": "Polygonネットワークを確認.", "connect_pay": "接続 & 0.3$支払い", "already_claimed": "✅ 受取済み!",
+        "go_to_twitter": "📢 Twitter/X投稿へ移動", "tweet_input": "ツイートリンクを入力:", "verify_btn": "確認して1,000 PMTXを取得"
     },
     "Français": {
         "nav": ["Aperçu", "Roadmap", "Tableau", "Prévente", "Staking", "Marché P2P", "Contact"],
@@ -66,7 +69,8 @@ i18n = {
         "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "Doublez vos profits!", "explain": "2% de récompense.",
         "airdrop_title": "Options d'Airdrop", "opt1": "Tâches (1,000 PMTX)", "task_desc": "Suivre, Aimer, RT et taguer 3 amis.",
         "opt2": "Réclamation Express (500 PMTX)", "express_desc": "Obtenez 500 PMTX instantanément.", "fee_desc": "Frais: 0.3$ (Dev + Gaz).",
-        "wallet_info": "Assurez-vous d'être sur Polygon.", "connect_pay": "Connecter & Payer 0.3$", "already_claimed": "✅ Déjà réclamé !"
+        "wallet_info": "Assurez-vous d'être sur Polygon.", "connect_pay": "Connecter & Payer 0.3$", "already_claimed": "✅ Déjà réclamé !",
+        "go_to_twitter": "📢 Aller au tweet Twitter/X", "tweet_input": "Entrez le lien du tweet :", "verify_btn": "Vérifier & Réclamer 1,000 PMTX"
     },
     "Español": {
         "nav": ["Resumen", "Hoja de ruta", "Panel", "Preventa", "Staking", "Mercado P2P", "Contacto"],
@@ -78,7 +82,8 @@ i18n = {
         "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "¡Duplica tus ganancias!", "explain": "2% de recompensa.",
         "airdrop_title": "Opciones de Airdrop", "opt1": "Tareas (1,000 PMTX)", "task_desc": "Seguir, Like, RT y taguer 3 amigos.",
         "opt2": "Reclamo Express (500 PMTX)", "express_desc": "Obtén 500 PMTX al instante.", "fee_desc": "Tarifa: 0.3$ (Dev + Gas).",
-        "wallet_info": "Asegúrate de estar en Polygon.", "connect_pay": "Conectar & Pagar 0.3$", "already_claimed": "✅ ¡Ya reclamado!"
+        "wallet_info": "Asegúrate de estar en Polygon.", "connect_pay": "Conectar & Pagar 0.3$", "already_claimed": "✅ ¡Ya reclamado!",
+        "go_to_twitter": "📢 Ir a la publicación de Twitter/X", "tweet_input": "Ingresa el enlace del tweet:", "verify_btn": "Verificar y Reclamar 1,000 PMTX"
     },
     "Deutsch": {
         "nav": ["Überblick", "Roadmap", "Dashboard", "Vorverkauf", "Staking", "P2P-Markt", "Kontakt"],
@@ -90,10 +95,10 @@ i18n = {
         "p1": "0.00005 $", "p2": "0.0001 $", "p3": "0.0003 $", "promo": "Verdoppeln Sie Ihre Gewinne!", "explain": "2% Belohnung.",
         "airdrop_title": "Airdrop-Optionen", "opt1": "Aufgaben (1,000 PMTX)", "task_desc": "Folgen, Like, RT & markiere 3 Freunde.",
         "opt2": "Express-Anspruch (500 PMTX)", "express_desc": "Erhalte 500 PMTX sofort.", "fee_desc": "Gebühr: 0.3$ (Dev + Gas).",
-        "wallet_info": "Stelle sicher, dass du im Polygon-Netzwerk bist.", "connect_pay": "Verbinden & 0.3$ zahlen", "already_claimed": "✅ Beansprucht!"
+        "wallet_info": "Stelle sicher, dass du im Polygon-Netzwerk bist.", "connect_pay": "Verbinden & 0.3$ zahlen", "already_claimed": "✅ Beansprucht!",
+        "go_to_twitter": "📢 Zum Twitter/X-Beitrag", "tweet_input": "Tweet-Link eingeben:", "verify_btn": "Verifizieren & 1,000 PMTX erhalten"
     }
 }
-
 # 5. اختيار اللغة
 lang = st.sidebar.selectbox(" Language / اللغة", list(i18n.keys()))
 t = i18n[lang]
@@ -140,16 +145,25 @@ if page == t["nav"][0]:
     if not st.session_state.get('airdrop_claimed', False):
         st.markdown(f"### 🚀 {t.get('airdrop_title', 'Airdrop Options')}")
         
-        # الخيار الأول: المهام (1000 عملة)
+        # الخيار الأول: المهام (1,000 PMTX)
         with st.expander(f"✅ {t.get('opt1', 'Complete Tasks (1,000 PMTX)')}"):
             st.write(t.get('task_desc', 'Follow, Like, Retweet & Tag 3 friends.'))
-            tweet_link = st.text_input(t.get('tweet_input', 'Tweet Link:'))
+            
+            # زر الرابط (لا يلمس الرصيد نهائياً)
+            st.link_button(t["go_to_twitter"], "https://x.com/PMTXCoin")
+            
+            # مربع الإدخال
+            tweet_link = st.text_input(t.get('tweet_input', 'Enter your tweet link:'))
+            
+            # زر التحقق (هو فقط من يغير الرصيد)
             if st.button(t.get('verify_btn', 'Verify & Get 1,000 PMTX')):
-                if tweet_link:
+                if tweet_link and "twitter" in tweet_link:
                     st.session_state.balance += 1000.0
                     st.session_state.airdrop_claimed = True
-                    st.success("Success!")
+                    st.success("🎉 Success!")
                     st.rerun()
+                else:
+                    st.error("Please enter a valid link!")
 
         # الخيار الثاني: الاستلام السريع (500 عملة مقابل 0.3$ رسوم)
         with st.expander(f"⚡ {t.get('opt2', 'Express Claim (500 PMTX)')}"):
