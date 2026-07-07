@@ -197,9 +197,11 @@ if page == t["nav"][0]:
             st.success(t.get('twitter_success'))
             
             # خيارات المطالبة (لا تظهر إلا بعد الربط)
+            # ... (بعد التحقق من أن تويتر مربوط)
+            # خيارات المطالبة
             st.markdown(f"### 🚀 {t.get('airdrop_title')}")
             
-            # الخيار 1: المهام (1,000 PMTX)
+            # الخيار 1: المهام
             with st.expander(f"✅ {t.get('opt1')}"):
                 st.write(t.get('task_desc'))
                 st.link_button(t["go_to_twitter"], "https://x.com/PMTXCoin")
@@ -211,16 +213,16 @@ if page == t["nav"][0]:
                         st.rerun()
                     else: st.error("Invalid Link!")
 
-            # الخيار 2: الاستلام السريع (500 PMTX)
-            with st.expander(f"⚡ {t.get('express_btn')}"):
-                st.write(t.get('express_desc'))
-                st.write(f"**{t.get('fee_note')}**")
-                if st.button(t.get('pay_btn')):
+            # الخيار 2: الاستلام السريع (500 PMTX) - هنا الحل
+            with st.expander(f"⚡ {t.get('express_btn', 'Express Claim (500 PMTX)')}"):
+                st.write(t.get('express_desc', 'Get 500 PMTX instantly.'))
+                st.write(f"**{t.get('fee_note', 'Fee: 0.3$')}**")
+                
+                if st.button(t.get('pay_btn', 'Pay 0.3$ & Claim')):
                     st.session_state.balance += 500
                     st.session_state.airdrop_claimed = True
                     st.success("Payment Received & PMTX Claimed!")
                     st.rerun()
-    else:
         st.success(t.get('already_claimed'))
 # 2. صفحة Roadmap
 elif page == t["nav"][1]:
