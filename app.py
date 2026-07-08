@@ -140,16 +140,28 @@ i18n = {
 lang = st.sidebar.selectbox(" Language / اللغة", list(i18n.keys()))
 t = i18n[lang]
 
-# 6. القائمة الجانبية (تم دمج الرابط الرسمي)
-if st.sidebar.button(t["connect"]):
-    st.sidebar.success("Connected!")
+# 6. القائمة الجانبية (بعد حذف زر الاتصال بالمحفظة مع الحفاظ على توافق اللغات)
+# 1. إضافة زر العقد الذكي في الأعلى
+st.sidebar.markdown("### 🛡️ Smart Contract")
 
-page = st.sidebar.radio("PMTX COIN", t["nav"])
+polygonscan_url = "https://polygonscan.com/address/0xc4AF4aEeBab3B717f771941ce7F1A3E4C765a53E"
 
-# إضافة رابط تويتر الرسمي الخاص بك
-st.sidebar.markdown("---")
+# التوافق التام مع اللغات الـ 6 باستخدام .get()
+st.sidebar.link_button(
+    t.get("contract_btn", "View on PolygonScan"), 
+    polygonscan_url, 
+    help=t.get("contract_help", "Verify contract on PolygonScan")
+)
+
+# 2. إضافة رابط تويتر الرسمي
 st.sidebar.markdown("### 📢 Official Community")
 st.sidebar.link_button("Follow @PMTXCoin", "https://x.com/PMTXCoin")
+
+# 3. إضافة فاصل قبل قائمة الصفحات
+st.sidebar.markdown("---")
+
+# 4. قائمة الصفحات (تأتي الآن في الأسفل)
+page = st.sidebar.radio("PMTX COIN", t["nav"])
 
 # 7. الجزء التحفيزي الرئيسي
 st.markdown(f'''
@@ -164,9 +176,12 @@ st.markdown(f'''
 
 # --- تنظيم الصفحات ---
 
-# 1. ابحث عن صفحة الـ Overview في كودك
+# 7. تنظيم الصفحات باستخدام التبويبات الأفقية (Tabs)
+# هذه التابات تستخدم نفس القاموس 't' لضمان بقاء جميع النصوص والخصائص كما هي
+tabs = st.tabs(t["nav"])
+
 # 1. صفحة Overview
-if page == t["nav"][0]:
+with tabs[0]:
     st.subheader(f"💰 {t['bal']}")
     col_bal1, col_bal2 = st.columns(2)
     with col_bal1:
@@ -177,13 +192,11 @@ if page == t["nav"][0]:
     
     st.write("---")
     
-    # --- كود بوابة الربط والجائزة المعلقة المدمج ---
-    # قسم الإيردروب
+    # قسم الإيردروب (نفس منطقك السابق تماماً)
     if not st.session_state.get('airdrop_claimed', False):
         st.warning(f"💎 {t.get('pending_text')}: **{st.session_state.pending_reward} PMTX**")
         st.markdown(f"### 🔒 {t.get('setup_required')}")
         
-        # بوابة الربط (إجبارية)
         if not st.session_state.wallet_connected:
             if st.button(t.get('connect_wallet')):
                 st.session_state.wallet_connected = True
@@ -195,13 +208,8 @@ if page == t["nav"][0]:
                 st.rerun()
         else:
             st.success(t.get('twitter_success'))
-            
-            # خيارات المطالبة (لا تظهر إلا بعد الربط)
-            # ... (بعد التحقق من أن تويتر مربوط)
-            # خيارات المطالبة
             st.markdown(f"### 🚀 {t.get('airdrop_title')}")
             
-            # الخيار 1: المهام
             with st.expander(f"✅ {t.get('opt1')}"):
                 st.write(t.get('task_desc'))
                 st.link_button(t["go_to_twitter"], "https://x.com/PMTXCoin")
@@ -213,72 +221,54 @@ if page == t["nav"][0]:
                         st.rerun()
                     else: st.error("Invalid Link!")
 
-            # الخيار 2: الاستلام السريع (500 PMTX) - هنا الحل
             with st.expander(f"⚡ {t.get('express_btn', 'Express Claim (500 PMTX)')}"):
                 st.write(t.get('express_desc', 'Get 500 PMTX instantly.'))
                 st.write(f"**{t.get('fee_note', 'Fee: 0.3$')}**")
-                
                 if st.button(t.get('pay_btn', 'Pay 0.3$ & Claim')):
                     st.session_state.balance += 500
                     st.session_state.airdrop_claimed = True
                     st.success("Payment Received & PMTX Claimed!")
                     st.rerun()
         st.success(t.get('already_claimed'))
+
 # 2. صفحة Roadmap
-elif page == t["nav"][1]:
+with tabs[1]:
     st.subheader(f"📍 {t['roadmap_title']}")
-    
-    # نص تسويقي مقنع وجديد
     st.info(t["why_pmtx"])
-    
-    # 1. الأسعار ومراحل البيع
     st.markdown(f"### {t['presale_header']}")
     col1, col2, col3 = st.columns(3)
     col1.metric("Phase 1", t["p1"])
     col2.metric("Phase 2", t["p2"])
     col3.metric("Phase 3", t["p3"])
-    
-    # 2. السعر المستهدف
     st.markdown(f"**{t['target_price']}** 🚀 <span style='color: #FFD700; font-size: 24px;'>0.50 $</span>", unsafe_allow_html=True)
-    
     st.divider()
-    
-    # 3. خارطة الطريق
     st.markdown("### 🗓️ Project Timeline")
     c1, c2, c3 = st.columns(3)
     c1.markdown(f"#### {t['roadmap_details'][0]}")
     c2.markdown(f"#### {t['roadmap_details'][1]}")
     c3.markdown(f"#### {t['roadmap_details'][2]}")
-    
     st.divider()
     st.info(t["rm_footer"])
 
 # 3. صفحة Dashboard
-elif page == t["nav"][2]:
+with tabs[2]:
     st.subheader(f"📈 {t['nav'][2]}")
     col1, col2, col3 = st.columns(3)
     col1.metric("Total PMTX", f"{st.session_state.balance:,.0f}")
     col2.metric("Referrals", "0")
     col3.metric("Growth", "+15%")
 
-# 4. صفحة Presale & Referrals (تمت إضافة حقل اسم المستخدم وإنشاء الرابط)
-elif page == t["nav"][3]:
+# 4. صفحة Presale & Referrals
+with tabs[3]:
     st.subheader(f"🔗 {t['ref']}")
-   
-    # قسم إنشاء رابط الإحالة
     st.info(f"🚀 {t['promo']}")
     user_input = st.text_input(t["user_lbl"], value=st.session_state.username)
-   
     if st.button(t["gen_btn"]):
         st.session_state.username = user_input
-        # يمكنك تغيير 'pmtx-coin-official2026.streamlit.app' برابط موقعك الحقيقي لاحقاً
         ref_link = f"https://pmtx-coin-official2026.streamlit.app/?ref={user_input}"
         st.success(f"🔗 Your Referral Link: {ref_link}")
         st.code(ref_link, language="text")
-   
     st.divider()
-   
-    # قسم حاسبة الاستثمار
     st.warning(f"💡 {t['explain']}")
     inv = st.number_input(t["inv_text"], min_value=0.0, step=10.0)
     if st.button(t["inv_btn"]):
@@ -288,14 +278,16 @@ elif page == t["nav"][3]:
         st.rerun()
 
 # 5. الصفحات التي قيد الإنشاء (Staking & P2P)
-elif page in [t["nav"][4], t["nav"][5]]:
+with tabs[4]:
+    st.markdown(f'<div class="soon-box">{t["soon"]}</div>', unsafe_allow_html=True)
+
+with tabs[5]:
     st.markdown(f'<div class="soon-box">{t["soon"]}</div>', unsafe_allow_html=True)
 
 # 6. صفحة Contact Us
-elif page == t["nav"][6]:
+with tabs[6]:
     st.subheader("✉️ اتصل بنا / Contact Us")
     with st.form("contact_form"):
-        # طلب مساعدة سابقة بخصوص اسم مستعار
         st.text_input("Name (You can use a pseudonym)")
         st.text_area("رسالتك / Message")
         st.form_submit_button("إرسال / Submit")
